@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "San Francisco Light";
+  src: url(SFProDisplay-Light.ttf);
+}
+@font-face {
+  font-family: "San Francisco Thin";
+  src: url(SFProDisplay-Thin.ttf);
+}
+body {
+  background-color: #2d2f32;
+}
+.calculator {
+  width: 227px;
+  height: 315px;
+  border: 1px solid #2d2f32;
+  border-radius: 5px;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  outline-offset: -2px;
+  /* box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset; */
+  -webkit-box-shadow: 0px 0px 74px -7px rgba(0, 0, 0, 0.95);
+  -moz-box-shadow: 0px 0px 74px -7px rgba(0, 0, 0, 0.95);
+  box-shadow: 0px 0px 74px -7px rgba(0, 0, 0, 0.95);
+  margin: auto;
+}
+
+.calculator .navi {
+  width: 211px;
+  height: 12px;
+  display: flex;
+  padding: 5px 8px 0 8px;
+}
+.calculator .navi .radio_btn {
+  margin-right: 8px;
+}
+
+.calculator .navi .radio_btn input[type="radio"] {
+  display: none;
+}
+
+.calculator .navi .radio_btn label {
+  height: 12px;
+  width: 12px;
+  background-color: #5f6365;
+  color: #2d2f32;
+  font-family: San Francisco Light, Helvetica, Arial, san-serif;
+  font-size: 10px;
+  display: block;
+  padding: 0 0;
+  text-align: center;
+  border-radius: 50%;
+  /* cursor: pointer; */
+  /* user-select: none; */
+}
+
+.calculator .input {
+  width: 197px;
+  height: 64px;
+  color: white;
+  font-family: San Francisco Thin, Helvetica, Arial, san-serif;
+  background-color: #2c2f34;
+  border-style: none;
+  font-size: 50px;
+  padding: 0 15px;
+  text-align: end;
+  outline: none;
+}
+
+.calculator .buttons {
+  width: 227px;
+  height: 234px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  /* align-items: center; */
+}
+
+.calculator .buttons button {
+  width: 56px;
+  height: 46px;
+  border-style: none;
+  outline: none;
+  /* font-size: 20px; */
+  font-family: San Francisco Light, Helvetica, Arial, san-serif;
+}
+
+.calculator .buttons button.dark_grey_btn {
+  color: white;
+  background-color: #414447;
+  font-size: 18px;
+}
+
+.calculator .buttons button.light_grey_btn {
+  color: white;
+  background-color: #5f6365;
+  font-size: 20px;
+}
+
+.calculator .buttons button.orange_btn {
+  color: white;
+  background-color: #ff9f0b;
+  font-size: 22px;
+}
+
+/* Remove outline on the forms and links */
+/* :active,
+   :hover,
+   :focus {
+        outline: 0;
+        outline-offset: 0;
+    } */
