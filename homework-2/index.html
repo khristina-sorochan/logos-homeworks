@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOMEWORK 02 ADV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="navi">
+        <div class="radio_btn">
+          <input id="radio-1" type="radio" name="radio" value="close" />
+          <label for="radio-1" style="background-color: #ff5a51">×</label>
+        </div>
+        <div class="radio_btn">
+          <input id="radio-2" type="radio" name="radio" value="Minimize" />
+          <label for="radio-2" style="background-color: #e7c02a">-</label>
+        </div>
+        <div class="radio_btn">
+          <input id="radio-3" type="radio" name="radio" value="Maximize" />
+          <label for="radio-3" style="background-color: #54c12b">+</label>
+        </div>
+      </div>
+      <input id="input" type="text" class="input" value="0" readonly />
+      <div class="buttons">
+        <button onclick="calculator.clearNumbers();" class="dark_grey_btn">
+          AC
+        </button>
+        <button onclick="calculator.invertNum();" class="dark_grey_btn">
+          +/-
+        </button>
+        <button onclick="calculator.profitNum();" class="dark_grey_btn">
+          %
+        </button>
+        <button onclick="calculator.setOperator('/');" class="orange_btn">
+          ÷
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="7"
+          class="light_grey_btn"
+        >
+          7
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="8"
+          class="light_grey_btn"
+        >
+          8
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="9"
+          class="light_grey_btn"
+        >
+          9
+        </button>
+        <button onclick="calculator.setOperator('*');" class="orange_btn">
+          ×
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="4"
+          class="light_grey_btn"
+        >
+          4
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="5"
+          class="light_grey_btn"
+        >
+          5
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="6"
+          class="light_grey_btn"
+        >
+          6
+        </button>
+        <button onclick="calculator.setOperator('-');" class="orange_btn">
+          -
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="1"
+          class="light_grey_btn"
+        >
+          1
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="2"
+          class="light_grey_btn"
+        >
+          2
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="3"
+          class="light_grey_btn"
+        >
+          3
+        </button>
+        <button onclick="calculator.setOperator('+');" class="orange_btn">
+          +
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value="0"
+          class="light_grey_btn"
+          style="width: 113px"
+        >
+          0
+        </button>
+        <button
+          onclick="calculator.numberClick(event);"
+          value=","
+          class="light_grey_btn"
+        >
+          ,
+        </button>
+        <button onclick="calculator.setOperator('=');" class="orange_btn">
+          =
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
