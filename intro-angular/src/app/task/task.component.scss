@@ -1,0 +1,38 @@
+.container {
+  width: 1000px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  width: 90%;
+  height: 25px;
+  margin: 10px 0;
+  border: 1px solid grey;
+
+  span {
+    margin: 0 10px;
+  }
+}
+
+td {
+   width: 25%;
+}
+
+tbody, thead {
+  width: 90%;
+}
+
+//table {
+//  border-collapse: collapse;
+//}
+//
+//table, th, td {
+//  border: 1px solid black;
+//  text-align: center;
+//  padding: 5px;
+//}
