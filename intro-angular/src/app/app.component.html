@@ -1,1 +1,50 @@
-<router-outlet></router-outlet>
+<!--<div class="some">-->
+<!--  <h3>{{ myNumber }}</h3>-->
+<!--</div>-->
+
+<ul>
+  <li *ngFor="let item of arr; let i = index">
+    {{ i+1 }}.{{ item }}
+  </li>
+</ul>
+
+<div>
+  <input type="text" [(ngModel)]="valueToFind">
+  <input type="button" (mouseup)="find()" value="Find">
+</div>
+<div>
+  <button (click)="random()">Random</button>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <td>Index</td>
+    <td>Name</td>
+    <td>Location</td>
+    <td>Job</td>
+    <td>Hobby</td>
+    <td>Status</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let person of persons; let i = index">
+    <td>{{ i+1 }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.location }}</td>
+    <td>{{ person.job }}</td>
+    <td>{{ person.hobby }}</td>
+    <td>{{ person.status }}</td>
+    <td>
+      <button (click)="done(i)">Done</button>
+      <button (click)="progress(i)">In Progress</button>
+      <button (click)="deletePerson(i)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div>
+  <input type="text" [(ngModel)]="value">
+  <span>Output {{ value }}</span>
+</div>
