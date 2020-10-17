@@ -1,5 +1,28 @@
-<!--<app-task></app-task>-->
-<!--<span>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</span>-->
-<!--<app-task></app-task>-->
+<!--<div class="container">-->
+<!--  <app-user></app-user>-->
+<!--  <app-todo></app-todo>-->
+<!--<app-post></app-post>-->
+<!--</div>-->
 
-<app-calculator></app-calculator>
+
+
+<div style="display: flex; flex-direction: row">
+  <div style="width: 30%">
+    <div *ngFor="let user of users" style="width: 70%; border: 1px solid black">
+      <h3>User</h3>
+      <span>{{ user.name }}</span>
+    </div>
+  </div>
+  <div style="width: 30%">
+    <div *ngFor="let todo of todos" style="width: 70%; border: 1px solid black">
+      <h3>Todo</h3>
+      <span>{{ todo.title }}</span>
+    </div>
+  </div>
+  <div style="width: 30%">
+    <div *ngFor="let post of posts" style="width: 70%; border: 1px solid black">
+      <h3>Post</h3>
+      <span>{{ post.title }}</span>
+    </div>
+  </div>
+</div>
