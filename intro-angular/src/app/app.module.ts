@@ -9,6 +9,9 @@ import { CalculatorComponent } from "./calculator/calculator.component";
 import { UserComponent } from "./components/user/user.component";
 import { TodoComponent } from "./components/todo/todo.component";
 import { PostComponent } from "./components/post/post.component";
+import { HomeComponent } from "./components/home/home.component";
+import { ContactsComponent } from "./components/contacts/contacts.component";
+import { NotFoundComponent } from "./components/not-found/not-found.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { PostComponent } from "./components/post/post.component";
     CalculatorComponent,
     UserComponent,
     TodoComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent,
+    ContactsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
