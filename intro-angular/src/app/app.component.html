@@ -1,12 +1,13 @@
-<nav>
-  <div class="content">
+<div class="page">
+  <nav class="navigation">
     <ul class="list">
       <li routerLink="/">Home</li>
       <li routerLink="/users">Users</li>
       <li routerLink="/todos">Todos</li>
-      <li routerLink="/contacts">Contacts</li>
+      <li routerLink="/calculator">Calculator</li>
     </ul>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
   </div>
-</nav>
-
-<router-outlet></router-outlet>
+</div>

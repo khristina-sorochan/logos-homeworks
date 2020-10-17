@@ -5,6 +5,7 @@ import {UserComponent} from "./components/user/user.component";
 import {TodoComponent} from "./components/todo/todo.component";
 import {ContactsComponent} from "./components/contacts/contacts.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {CalculatorComponent} from "./calculator/calculator.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'todos',
     component: TodoComponent
+  },
+  {
+    path: 'calculator',
+    component: CalculatorComponent
   },
   {
     path: 'contacts',

@@ -1,6 +1,7 @@
 .calculator {
   width: 227px;
   height: 315px;
+  background-color: #2d2f32;
   border: 1px solid #2d2f32;
   border-radius: 5px;
   outline: 1px solid rgba(255, 255, 255, 0.3);
@@ -8,7 +9,7 @@
   -webkit-box-shadow: 0 0 74px -7px rgba(0, 0, 0, 0.95);
   -moz-box-shadow: 0 0 74px -7px rgba(0, 0, 0, 0.95);
   box-shadow: 0 0 74px -7px rgba(0, 0, 0, 0.95);
-  margin: auto;
+  margin: 5% 20%;
 }
 
 .navi {
