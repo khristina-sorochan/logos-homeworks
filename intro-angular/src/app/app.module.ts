@@ -12,6 +12,8 @@ import { PostComponent } from "./components/post/post.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ContactsComponent } from "./components/contacts/contacts.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+import { MarketComponent } from "./components/market/market.component";
+import { MarketItemComponent } from "./components/market-item/market-item.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NotFoundComponent } from "./components/not-found/not-found.component";
     PostComponent,
     HomeComponent,
     ContactsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MarketComponent,
+    MarketItemComponent
   ],
   imports: [
     BrowserModule,

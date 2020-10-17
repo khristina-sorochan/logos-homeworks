@@ -1,0 +1,10 @@
+<div class="head">
+  <span>Name: {{ product.name }}</span>
+  <span>Price: {{ product.price }}$</span>
+  <br>
+  <span [style.visibility]="count > 0 ? 'visible' : 'hidden'">
+    Count: {{ count }}
+  </span>
+  <br><br>
+  <button (click)="buyProduct(product.price)">Buy</button>
+</div>

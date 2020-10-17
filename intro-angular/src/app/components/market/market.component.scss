@@ -1,0 +1,15 @@
+.main {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.market-item {
+  width: 30%;
+  height: 200px;
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  margin: 15px;
+}
+
