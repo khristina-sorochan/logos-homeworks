@@ -1,20 +1,58 @@
-<div style="width: 60%; margin: auto">
+<!--<div style="width: 60%; margin: auto">-->
+<!--  <table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <td>№</td>-->
+<!--      <td>Title</td>-->
+<!--      <td>Status</td>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr *ngFor="let todo of todos; let i = index">-->
+<!--      <td>{{ i+1 }}</td>-->
+<!--      <td>{{ todo.title }}</td>-->
+<!--      <td>-->
+<!--        <input type="checkbox" [checked]="todo.completed">-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+
+
+<div>
+  <h2> Task manager </h2>
+
+  <div>
+    <input type="text" placeholder="enter task" [(ngModel)]="task" />
+    <button type="button" (click)="createTask()">Create Task</button>
+  </div>
+
+  <br/>
+
   <table>
     <thead>
     <tr>
-      <td>№</td>
-      <td>Title</td>
-      <td>Status</td>
+      <td style="width: 5%">№</td>
+      <td style="width: 60%">Task name</td>
+      <td style="width: 15%">Status</td>
+      <td style="width: 10%">Check</td>
+      <td style="width: 10%">Delete</td>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let todo of todos; let i = index">
-      <td>{{ i+1 }}</td>
-      <td>{{ todo.title }}</td>
-      <td>
-        <input type="checkbox" [checked]="todo.completed">
+    <tr *ngFor="let task of tasks; let i = index">
+      <td style="width: 5%"> {{ i+1 }} </td>
+      <td style="width: 60%"> {{ task.name }} </td>
+      <td style="width: 15%"> {{ task.status }} </td>
+      <td style="width: 10%">
+        <input type="checkbox" [checked]="task.checked" (change)="changeStatus(i)">
+      </td>
+      <td style="width: 10%">
+        <button type="button" (click)="deleteTask(i)">Delete</button>
       </td>
     </tr>
     </tbody>
   </table>
+
 </div>

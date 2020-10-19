@@ -14,6 +14,7 @@ import { ContactsComponent } from "./components/contacts/contacts.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { MarketComponent } from "./components/market/market.component";
 import { MarketItemComponent } from "./components/market-item/market-item.component";
+import { TodosComponent } from './components/todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MarketItemComponent } from "./components/market-item/market-item.compon
     ContactsComponent,
     NotFoundComponent,
     MarketComponent,
-    MarketItemComponent
+    MarketItemComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
