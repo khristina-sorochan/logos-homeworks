@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 // import {TodoService} from "../../services/todo.service";
 
 @Component({
@@ -21,7 +21,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 export class TodoComponent implements OnInit {
 
-  task: string;
+  task: string = '';
   tasks = [];
 
   @Output() counterTask = new EventEmitter<any>();
@@ -29,14 +29,16 @@ export class TodoComponent implements OnInit {
   constructor() { }
 
   createTask(){
-    this.counterTask.emit('created');
-    this.tasks.push(
-      {
-        name: this.task,
-        status: 'In Progress',
-        checked: false
-    });
-    this.task = '';
+    if (this.task != '') {
+      this.counterTask.emit('created');
+      this.tasks.push(
+        {
+          name: this.task,
+          status: 'In Progress',
+          checked: false
+        });
+      this.task = '';
+    }
   }
 
   changeStatus(i: number) {

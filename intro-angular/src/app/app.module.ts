@@ -15,6 +15,7 @@ import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { MarketComponent } from "./components/market/market.component";
 import { MarketItemComponent } from "./components/market-item/market-item.component";
 import { TodosComponent } from './components/todos/todos.component';
+import { BasketComponent } from './components/basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TodosComponent } from './components/todos/todos.component';
     NotFoundComponent,
     MarketComponent,
     MarketItemComponent,
-    TodosComponent
+    TodosComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
