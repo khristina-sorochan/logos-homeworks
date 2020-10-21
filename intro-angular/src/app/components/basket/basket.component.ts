@@ -8,19 +8,32 @@ import {MarketService} from "../../services/market.service";
 })
 export class BasketComponent implements OnInit {
 
-  basketItems: any[] = [];
+  // item: number = 0;
+  // str: string = 'aaa';
+  // isValue: boolean = true;
+  // some: undefined = undefined;
+  // a = null;
+  //
+  // arrStr: string[] = [];
+  // arrNum: number[] = [];
+  //
+  // obj: {} = {};
+  // obj1: any = {};
+  // typeof a;
+
+  basketItems: IBasketItem[] = [];
 
   constructor(public marketService: MarketService) { }
 
   ngOnInit(): void {
-    this.marketService.$basketSubject.subscribe((newItem) => {
+    this.marketService.$basketSubject.subscribe((newItem: IBasketItem) => {
       this.basketItems.push(newItem);
     });
   }
 
-  getTotalPrice(items: any[]): number {
+  getTotalPrice(items: IBasketItem[]): number {
     let sum = 0;
-    items.forEach(item => sum += parseInt(item.price))
+    items.forEach(item => sum += item.price);
     return sum;
   }
 
@@ -32,4 +45,10 @@ export class BasketComponent implements OnInit {
     // this.marketService.$basketSubject.unsubscribe();
   }
 
+}
+
+export interface IBasketItem {
+  name: string;
+  price: number;
+  onSale?: boolean;
 }

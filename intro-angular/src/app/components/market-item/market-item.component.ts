@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MarketService} from "../../services/market.service";
+import {IBasketItem} from "../basket/basket.component";
 
 @Component({
   selector: 'app-market-item',
@@ -28,14 +29,14 @@ import {MarketService} from "../../services/market.service";
 
 export class MarketItemComponent implements OnInit {
 
-  @Input('product') product: any;
+  @Input('product') product: IBasketItem;
 
   constructor(public marketService: MarketService) { }
 
   ngOnInit(): void {
   }
 
-  buyProduct(obj: any): void {
+  buyProduct(obj: IBasketItem): void {
     this.marketService.$basketSubject.next(obj);
   }
 

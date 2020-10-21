@@ -16,6 +16,7 @@ import { MarketComponent } from "./components/market/market.component";
 import { MarketItemComponent } from "./components/market-item/market-item.component";
 import { TodosComponent } from './components/todos/todos.component';
 import { BasketComponent } from './components/basket/basket.component';
+import { ProdDirective } from './directives/prod.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BasketComponent } from './components/basket/basket.component';
     MarketComponent,
     MarketItemComponent,
     TodosComponent,
-    BasketComponent
+    BasketComponent,
+    ProdDirective
   ],
   imports: [
     BrowserModule,

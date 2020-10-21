@@ -10,9 +10,10 @@
 <!--</div>-->
 
 
-<div class="head">
+<div class="head" appProd [onSale]="product.onSale">
   <span>Name: {{ product.name }}</span>
   <span>Price: {{ product.price }}$</span>
+  <span *ngIf="product.onSale">SALE*</span>
   <br><br>
   <button (click)="buyProduct(product)">Buy</button>
 </div>
