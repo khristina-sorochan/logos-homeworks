@@ -2,30 +2,20 @@
 <!--  <h2>Summary price: {{ sum }}$</h2>-->
 <!--</div>-->
 
-<!--<div class="main">-->
-<!--  <div class="market-item" *ngFor="let product of products">-->
-<!--    <app-market-item-->
-<!--      [product]="product"-->
-<!--      (boughtProduct)="receiveNewPrice($event)"-->
-<!--    >-->
-<!--    </app-market-item>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-<div style="display: flex; justify-content: space-between">
+<div style="display: flex">
   <div class="main">
     <div class="market-item"
          *ngFor="let product of products"
     >
-      <!--         [style.border]="product.onSale ? '1px solid red' : '0.5px solid grey'"-->
-      <!--         [ngClass]="product.onSale ? 'red' : 'none'"-->
+      <!--      [style.border]="product.onSale ? '1px solid red' : '0.5px solid grey'"-->
+      <!--      [ngClass]="product.onSale ? 'red' : 'none'"-->
       <app-market-item
         [product]="product"
       >
+        <!--      (boughtProduct)="receiveNewPrice($event)"-->
       </app-market-item>
     </div>
   </div>
 
-  <app-basket style="width: 25%; border-left: 1px solid black;"></app-basket>
+  <app-basket class="basket"></app-basket>
 </div>

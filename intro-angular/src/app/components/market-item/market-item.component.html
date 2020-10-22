@@ -1,19 +1,17 @@
-<!--<div class="head">-->
-<!--  <span>Name: {{ product.name }}</span>-->
-<!--  <span>Price: {{ product.price }}$</span>-->
-<!--  <br>-->
-<!--  <span [style.visibility]="count > 0 ? 'visible' : 'hidden'">-->
-<!--    Count: {{ count }}-->
-<!--  </span>-->
-<!--  <br><br>-->
-<!--  <button (click)="buyProduct(product.price)">Buy</button>-->
-<!--</div>-->
-
-
-<div class="head" appProd [onSale]="product.onSale">
-  <span>Name: {{ product.name }}</span>
-  <span>Price: {{ product.price }}$</span>
+<div class="head" appProd
+     [onSale]="product.onSale"
+     [name]="product.name"
+>
+  <div style="text-align: center">
+    <img src="{{ product.imageUrl }}" alt="">
+  </div>
+  <span>{{ product.name }}</span>
+  <span [ngClass]="{ price: true }">{{ product.price | currency:'USD':false:'3.0-0' }}</span>
   <span *ngIf="product.onSale">SALE*</span>
+  <!--  <br>-->
+  <!--  <span [style.visibility]="count > 0 ? 'visible' : 'hidden'">-->
+  <!--    Count: {{ count }}-->
+  <!--  </span>-->
   <br><br>
   <button (click)="buyProduct(product)">Buy</button>
 </div>

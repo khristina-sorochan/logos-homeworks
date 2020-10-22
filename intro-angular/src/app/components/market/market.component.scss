@@ -1,22 +1,19 @@
 .main {
   width: 80%;
-  margin: 20px auto;
+  //margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
 }
 
-.market-item {
-  width: 30%;
-  height: 200px;
-  border: 0.5px solid gray;
-  border-radius: 10px;
-  margin: 15px;
-}
+//.red {
+//  border: 0.5px solid red;
+//}
+//
+//.none {
+//  border: 0.5px solid #f3f3f5;
+//}
 
-.red {
-  border: 1px solid red;
-}
-
-.none {
-  border: 0.5px solid gray;
+.basket {
+  width: 20%;
+  border-left: 1px solid black;
 }

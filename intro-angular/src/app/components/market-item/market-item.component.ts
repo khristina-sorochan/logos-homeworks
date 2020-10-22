@@ -7,29 +7,12 @@ import {IBasketItem} from "../basket/basket.component";
   templateUrl: './market-item.component.html',
   styleUrls: ['./market-item.component.scss']
 })
-
-// export class MarketItemComponent implements OnInit {
-//
-//   count = 0;
-//
-//   @Input('product') product: any;
-//   @Output('boughtProduct') boughtProduct = new EventEmitter();
-//
-//   constructor() { }
-//
-//   ngOnInit(): void {
-//   }
-//
-//   buyProduct(price: number): void {
-//     this.boughtProduct.emit(price);
-//     this.count++;
-//   }
-//
-// }
-
 export class MarketItemComponent implements OnInit {
 
+  // count = 0;
+
   @Input('product') product: IBasketItem;
+  // @Output('boughtProduct') boughtProduct = new EventEmitter();
 
   constructor(public marketService: MarketService) { }
 
@@ -38,6 +21,8 @@ export class MarketItemComponent implements OnInit {
 
   buyProduct(obj: IBasketItem): void {
     this.marketService.$basketSubject.next(obj);
+    // this.boughtProduct.emit(price);
+    // this.count++;
   }
 
 }
