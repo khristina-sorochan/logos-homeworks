@@ -1,0 +1,68 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Sign Up Form</h3>
+
+        <form [formGroup]="registerForm" (submit)="submit()">
+
+          <div class="form-group">
+            <label>First Name: </label>
+            <input type="text"
+                   formControlName="firstName"
+                   [ngClass]="{'is-invalid' : submitted && f.firstName.errors}">
+            <div *ngIf="submitted && f.firstName.errors">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Last Name: </label>
+            <input type="text" formControlName="lastName"
+                   [ngClass]="{'is-invalid' : submitted && f.lastName.errors}">
+            <div *ngIf="submitted && f.lastName.errors">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email: </label>
+            <input type="email" formControlName="email"
+                   [ngClass]="{'is-invalid' : submitted && f.email.errors}">
+            <div *ngIf="submitted && f.email.errors">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email is incorrect</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Password: </label>
+            <input type="password" formControlName="password"
+                   [ngClass]="{'is-invalid' : submitted && f.password.errors}">
+            <div *ngIf="submitted && f.password.errors">
+              <div *ngIf="f.password.errors.minLength">Password must have at least 6 characters</div>
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password: </label>
+            <input type="password" formControlName="confirmPassword"
+                   [ngClass]="{'is-invalid' : submitted && f.confirmPassword.errors}">
+            <div *ngIf="submitted && f.confirmPassword.errors">
+              <!--<div *ngIf="f.confirmPassword.errors.minLength">Confirm password must have at least 6 characters</div>-->
+              <div *ngIf="f.confirmPassword.errors.required">Confirm password is required</div>
+              <div *ngIf="f.confirmPassword.errors.MustMatch">Password and confirm password must be same</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="btn-primary" value="Register">
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

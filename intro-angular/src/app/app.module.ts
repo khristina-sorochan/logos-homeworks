@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { TaskComponent } from './task/task.component';
 import { CalculatorComponent } from "./calculator/calculator.component";
 import { UserComponent } from "./components/user/user.component";
@@ -17,6 +18,7 @@ import { MarketItemComponent } from "./components/market-item/market-item.compon
 import { TodosComponent } from './components/todos/todos.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { ProdDirective } from './directives/prod.directive';
+import { FormsComponent } from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { ProdDirective } from './directives/prod.directive';
     MarketItemComponent,
     TodosComponent,
     BasketComponent,
-    ProdDirective
+    ProdDirective,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

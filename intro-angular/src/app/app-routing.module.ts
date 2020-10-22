@@ -8,6 +8,7 @@ import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {CalculatorComponent} from "./calculator/calculator.component";
 import {MarketComponent} from "./components/market/market.component";
 import {TodosComponent} from "./components/todos/todos.component";
+import {FormsComponent} from "./components/forms/forms.component";
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'market',
     component: MarketComponent
+  },
+  {
+    path: 'forms',
+    component: FormsComponent
   },
   {
     path: '**',
