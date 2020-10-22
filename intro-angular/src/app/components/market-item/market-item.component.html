@@ -7,11 +7,11 @@
   </div>
   <span>{{ product.name }}</span>
   <span [ngClass]="{ price: true }">{{ product.price | currency:'USD':false:'3.0-0' }}</span>
-  <span *ngIf="product.onSale">SALE*</span>
+  <span [style.fontSize]="'0.8em'" *ngIf="product.onSale">SALE*</span>
   <!--  <br>-->
   <!--  <span [style.visibility]="count > 0 ? 'visible' : 'hidden'">-->
   <!--    Count: {{ count }}-->
   <!--  </span>-->
   <br><br>
-  <button (click)="buyProduct(product)">Buy</button>
+  <button class="btn btn-light" (click)="buyProduct(product)">Buy</button>
 </div>
