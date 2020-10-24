@@ -10,6 +10,8 @@ import {MarketComponent} from "./components/market/market.component";
 import {TodosComponent} from "./components/todos/todos.component";
 import {FormsComponent} from "./components/forms/forms.component";
 import {FormComponent} from "./components/form/form.component";
+import {AdminComponent} from "./components/admin/admin.component";
+import {CheckRoleGuard} from "./guards/check-role.guard";
 
 const routes: Routes = [
   {
@@ -47,6 +49,11 @@ const routes: Routes = [
   {
     path: 'form',
     component: FormComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [CheckRoleGuard]
   },
   {
     path: '**',

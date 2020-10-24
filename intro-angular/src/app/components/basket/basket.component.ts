@@ -50,6 +50,7 @@ export class BasketComponent implements OnInit {
 export interface IBasketItem {
   name: string;
   price: number;
+  date: Date;
   imageUrl: string;
   onSale?: boolean;
 }

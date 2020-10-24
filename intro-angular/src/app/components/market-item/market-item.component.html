@@ -6,12 +6,16 @@
     <img src="{{ product.imageUrl }}" alt="">
   </div>
   <span>{{ product.name }}</span>
+<!--  <span>{{ product.name | slice: 6: 12 }}</span>-->
+<!--  <span [ngClass]="{ price: true }">{{ product.price | currency: 'RUB': 'code' }}</span>-->
   <span [ngClass]="{ price: true }">{{ product.price | currency:'USD':false:'3.0-0' }}</span>
+<!--  <span>{{ product.date.toString() | lowercase }}</span>-->
+  <span [style.fontSize]="'0.8em'" >{{ product.date | date: "dd/MM/yyyy" }}</span>
   <span [style.fontSize]="'0.8em'" *ngIf="product.onSale">SALE*</span>
   <!--  <br>-->
   <!--  <span [style.visibility]="count > 0 ? 'visible' : 'hidden'">-->
   <!--    Count: {{ count }}-->
   <!--  </span>-->
-  <br><br>
+  <br>
   <button class="btn btn-light" (click)="buyProduct(product)">Buy</button>
 </div>

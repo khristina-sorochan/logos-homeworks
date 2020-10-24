@@ -20,6 +20,8 @@ import { BasketComponent } from './components/basket/basket.component';
 import { ProdDirective } from './directives/prod.directive';
 import { FormsComponent } from './components/forms/forms.component';
 import { FormComponent } from './components/form/form.component';
+import { CurrencyPipe } from './pipes/currency.pipe';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { FormComponent } from './components/form/form.component';
     BasketComponent,
     ProdDirective,
     FormsComponent,
-    FormComponent
+    FormComponent,
+    CurrencyPipe,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
