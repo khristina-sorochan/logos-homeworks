@@ -19,6 +19,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { ProdDirective } from './directives/prod.directive';
 import { FormsComponent } from './components/forms/forms.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormsComponent } from './components/forms/forms.component';
     TodosComponent,
     BasketComponent,
     ProdDirective,
-    FormsComponent
+    FormsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import {CalculatorComponent} from "./calculator/calculator.component";
 import {MarketComponent} from "./components/market/market.component";
 import {TodosComponent} from "./components/todos/todos.component";
 import {FormsComponent} from "./components/forms/forms.component";
+import {FormComponent} from "./components/form/form.component";
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'forms',
     component: FormsComponent
+  },
+  {
+    path: 'form',
+    component: FormComponent
   },
   {
     path: '**',
